@@ -1,0 +1,21 @@
+{
+    "name": "nhill/php-authentication",
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Nik",
+            "email": "mail@nik-hillebrecht.de"
+        }
+    ],
+    "require": {}
+}
