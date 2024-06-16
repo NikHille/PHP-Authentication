@@ -21,6 +21,7 @@ $pageTitle = 'Homepage';
     <?php endif; ?>
 </main>
 
-<?php
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/../components/partials/footer.php'; ?>
 
-require $_SERVER['DOCUMENT_ROOT'] . '/../components/partials/footer.php';
+</body>
+</html>

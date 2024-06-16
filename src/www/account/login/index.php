@@ -4,8 +4,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/../include/session.php';
 
 $pageTitle = 'Login';
 
-$_SESSION['isAuthenticated'] = true;
-
 ?>
 
 
@@ -32,6 +30,7 @@ $_SESSION['isAuthenticated'] = true;
     <a href="/account/signup">Create an account!</a>
 </main>
 
-<?php
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/../components/partials/footer.php'; ?>
 
-require $_SERVER['DOCUMENT_ROOT'] . '/../components/partials/footer.php';
+</body>
+</html>
