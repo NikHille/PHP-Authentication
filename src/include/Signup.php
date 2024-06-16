@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/User.php';
+
 class Signup
 {      
     /**
@@ -44,14 +46,10 @@ class Signup
      */
     public static function createUser($email, $pwd) : bool
     {
-        $usersJsonPath = $_SERVER['DOCUMENT_ROOT'] . '/../include/users.json';
+        $user = new User();
         
-        // read json
-        $jsonString = file_get_contents($usersJsonPath);
-        $users = json_decode($jsonString, true);
-
         // check if email already exists
-        if (Signup::checkForExistingUser($users, $email)) {
+        if ($user->checkForExistingUser($email)) {
             echo 'User already exists!<br>';
             return FALSE;
         }
@@ -60,33 +58,8 @@ class Signup
         $pwdHashed = password_hash($pwd, PASSWORD_DEFAULT);
         echo $pwdHashed;
 
-        // add user to users.json
-        $users[++$users['lastIndex']] = array(
-            'email' => $email,
-            'pwdhash' => $pwdHashed
-        );
-
-        // write updated users to users.json
-        file_put_contents($usersJsonPath, json_encode($users));
+        $user->addUser($email, $pwdHashed);
 
         return TRUE;
-    }
-
-    
-    /**
-     * Checking given user object for given email.
-     * @param  array $users User object.
-     * @param  string $email Email to be searched for.
-     * @return bool Returns TRUE if user already exists, otherwise FALSE.
-     */
-    public static function checkForExistingUser($users, $email) : bool
-    {
-        foreach ($users as $key => $value) {
-            if ($key === 'lastIndex') continue;
-            if ($value['email'] === $email) {
-                return TRUE;
-            }
-        }
-        return FALSE;
     }
 }

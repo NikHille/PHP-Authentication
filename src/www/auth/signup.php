@@ -16,7 +16,7 @@ $signup = Signup::createUser($_POST['email'], $_POST['pwd']);
 
 if (!$signup) {
     header('Location: /account/signup?error=emailinuse');
-    exit;
+    exit();
 }
 
 // login user and redirect to homepage

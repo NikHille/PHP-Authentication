@@ -79,27 +79,4 @@ class SignupTest extends TestCase
         $result = Signup::verifyPassword($pwd, $pwdWrong);
         $this->assertNotTrue($result);
     }
-
-
-    public function testForExistingUser()
-    {
-        $users = array(
-            "lastIndex" => 0,
-            "0" => array(
-                "email" => "test@example.com",
-                "pwdhash" => "$2y$10\$anXIfsYXtK7GYHceQ95rWed8U3Y5FFb3orBVAJwxFyo3xy4U3LtDm"
-            )
-        );
-
-        $existingEmail = 'test@example.com';
-        $newEmail = 'test2@example.com';
-
-        // test if user exists in given users object
-        $result = Signup::checkForExistingUser($users, $existingEmail);
-        $this->assertTrue($result);
-
-        // test if user is NOT already in users object
-        $result = Signup::checkForExistingUser($users, $newEmail);
-        $this->assertNotTrue($result);
-    }
 }
