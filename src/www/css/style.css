@@ -1,0 +1,27 @@
+@import url(./form.css);
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+header {
+    height: 50px;
+    background-color: yellow;
+}
+
+
+footer {
+    height: 50px;
+    background-color: lime;
+}
+
+
+main {
+    background-color: lightpink;
+}

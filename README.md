@@ -16,7 +16,7 @@ composer install
 For development you can start a webserver using the native php command:
 
 ```cmd
-php -S 127.0.0.1:8000 -t src
+php -S 127.0.0.1:8000 -t src/www
 ```
 
 
