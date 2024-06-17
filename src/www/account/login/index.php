@@ -4,6 +4,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/../include/session.php';
 
 $pageTitle = 'Login';
 
+// create csrf token for the form
+$_SESSION['token'] = md5(uniqid(mt_rand(), true));
+
 ?>
 
 
@@ -16,6 +19,7 @@ $pageTitle = 'Login';
     <h1>Login</h1>
 
     <form class="form__login" action="/auth/login.php" method="post">
+        <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
         <fieldset class="emails">
             <div class="form-input">
                 <label for="email">Enter your email</label>

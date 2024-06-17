@@ -1,7 +1,5 @@
 <?php
 
-use PhpParser\Node\Expr\Cast\Array_;
-
 class User
 {
     protected string $usersJsonPath;

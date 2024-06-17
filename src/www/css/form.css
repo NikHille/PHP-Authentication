@@ -28,6 +28,7 @@ fieldset .form-input label {
     font-size: 0.8rem;
 }
 
-fieldset .form-input input {
-    
+fieldset .form-input input.invalid,
+fieldset .form-input input:invalid {
+    border: 2px solid red;
 }
