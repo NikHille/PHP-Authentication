@@ -12,13 +12,21 @@ $pageTitle = 'Homepage';
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/../components/partials/header.php'; ?>
 
 <main>
-    <h1>Welcome to the PHP Authentication!</h1>
     
-    <?php if ($_SESSION['isAuthenticated']) : ?>
-    <p>You are now LOGGED IN! :)</p>
-    <?php else: ?>
-    <p>You need to login so you can see everything.</p>
+    <?php if ($_SESSION['isAuthenticated']) :
+
+    include $_SERVER['DOCUMENT_ROOT'] . '/../components/pages/homepage.php';
+    
+    else: ?>
+    
+    <h1>Welcome to the PHP Authentication!</h1>
+
+    <div class="content-tile">
+        <p>You need to <a href="/account/login" title="Link: Login Page">login</a> so you can see everything.</p>
+    </div>
+
     <?php endif; ?>
+
 </main>
 
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/../components/partials/footer.php'; ?>

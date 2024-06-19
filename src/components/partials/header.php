@@ -10,11 +10,13 @@
 <body>
     
 <header>
-    <a href="/">Home</a>
-
-    <?php if ($_SESSION['isAuthenticated']): ?>
-    <a href="/auth/logout.php"><button>Logout</button></a>
-    <?php else: ?>
-    <a href="/account/login"><button>Login</button></a>
-    <?php endif; ?>
+    <div class="header-content">
+        <a class="header-title" href="/">Authentication Webapp</a>
+    
+        <?php if ($_SESSION['isAuthenticated']): ?>
+        <a href="/auth/logout.php">Logout</a>
+        <?php else: ?>
+        <a href="/account/login" title="Link: Login Page">Login</a>
+        <?php endif; ?>
+    </div>
 </header>

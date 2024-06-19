@@ -1,11 +1,33 @@
-form.register,
-form.login {
-    display: flex;
-    width: 100%;
+form.form__register,
+form.form__login {
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+form[data-error="emailinuse"]::before {
+    content: "Email already in use!";
+    color: red;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+form[data-error="invalidinput"]::before {
+    content: "Invalid input!";
+    color: red;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+form[data-error="invalid"]::before {
+    content: "Invalid input!";
+    color: red;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 
 fieldset {
+    width: fit-content;
     border: none;
 }
 
@@ -19,16 +41,78 @@ fieldset.pwds {
 
 
 fieldset .form-input {
+    position: relative;
     display: flex;
     flex-direction: column;
+    gap: 5px;
     min-width: 250px;
+    padding-bottom: 1.2rem;
 }
 
 fieldset .form-input label {
+    text-align: left;
     font-size: 0.8rem;
 }
 
-fieldset .form-input input.invalid,
-fieldset .form-input input:invalid {
+fieldset .form-input input {
+    width: 100%;
+    height: 1.8rem;
+    color: initial;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0 0.35rem;
+}
+
+fieldset .form-input input.invalid {
     border: 2px solid red;
+}
+
+
+fieldset .form-input::after {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+
+fieldset .form-input:has(input[name="email"].invalid)::after {
+    content: "Enter a valid email!";
+    color: red;
+}
+fieldset .form-input:has(input[name="email_rpt"].invalid)::after {
+    content: "Does not match email!";
+    color: red;
+}
+fieldset .form-input:has(input[name="pwd"].invalid)::after {
+    content: "Password requirements not met!";
+    color: red;
+}
+fieldset .form-input:has(input[name="pwd_rpt"].invalid)::after {
+    content: "Does not match password!";
+    color: red;
+}
+
+
+form button[type="submit"] {
+    margin-top: 10px;
+}
+
+
+details {
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+summary {
+    cursor: pointer;
+}
+
+
+@media (max-width: 619px) {
+    fieldset.emails,
+    fieldset.pwds {
+        flex-direction: column;
+    }
 }

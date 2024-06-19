@@ -27,7 +27,7 @@ class Signup
     {
         $minLength = 8;
         $expressions = array(
-            '/[A-Z]/', '/[a-z]/', '/[0-9]/', '/[*$%!^]/'
+            '/[A-Z]/', '/[a-z]/', '/[0-9]/', '/[*$%!^#]/'
         );
         if (strlen($pwd) < $minLength) return FALSE;
         for ($i = 0; $i < count($expressions); $i++) {

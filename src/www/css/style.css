@@ -1,27 +1,79 @@
+@import url(./variables.css);
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./button.css);
+
 @import url(./form.css);
 
 * {
     box-sizing: border-box;
+    color: rgb(var(--color-ci-font));
     font-family: sans-serif;
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(var(--color-ci-background));
     margin: 0;
 }
 
 
-header {
-    height: 50px;
-    background-color: yellow;
+a {
+    color: rgb(var(--color-ci-link));
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(0.9);
 }
 
 
-footer {
-    height: 50px;
-    background-color: lime;
+h1 {
+    margin-top: 0;
 }
 
 
 main {
-    background-color: lightpink;
+    max-width: var(--max-content-width);
+    padding-top: 20px;
+    padding-left: var(--content-margin);
+    padding-right: var(--content-margin);
+    margin: auto;
+    margin-top: 20px;
+}
+
+main.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.centered {
+    text-align: center;
+}
+
+
+.content-tile {
+    background: var(--content-tile-background);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.content-tile.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.content-tile :first-child {
+    margin-top: 0;
+}
+
+.content-tile :last-child {
+    margin-bottom: 0;
 }

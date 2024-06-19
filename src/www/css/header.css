@@ -1,0 +1,31 @@
+header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--content-tile-shadow);
+}
+
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100%;
+    padding-left: var(--content-margin);
+    padding-right: var(--content-margin);
+}
+
+
+header .header-content {
+    font-size: 1.5rem;
+}
+
+
+header .header-content .header-title {
+    color: rgb(var(--color-ci-font));
+    font-weight: bold;
+    text-decoration: none;
+}
