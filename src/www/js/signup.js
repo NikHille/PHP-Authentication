@@ -30,7 +30,7 @@ function formSubmit(e) {
     inputs.forEach(input => {
         if (!validateInput(input)) validForm = false;
     });
-    
+    console.log(validForm)
     if (validForm) {
         form.submit();
     } else form.setAttribute('data-error', 'invalidinput');
@@ -67,6 +67,7 @@ function validateInput(input) {
         result = input.value === form.querySelector('[name="pwd"]').value;
     }
     updateInput(input, result);
+    return result;
 }
 
 
