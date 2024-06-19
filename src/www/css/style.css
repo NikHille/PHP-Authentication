@@ -58,9 +58,12 @@ main.centered {
 .content-tile {
     background: var(--content-tile-background);
     backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--content-tile-shadow);
     border-radius: 15px;
     padding: 20px;
+}
+.content-tile--dark {
+    background: none;
 }
 
 .content-tile.centered {

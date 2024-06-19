@@ -4,25 +4,27 @@ form.form__login {
     margin-bottom: 10px;
 }
 
+form::before {
+    box-sizing: border-box;
+    display: block;
+    min-width: 250px;
+    width: calc(100% - 0.75rem * 2 - 4px);
+    color: #fff;
+    background-color: rgb(170, 0, 0);
+    border-radius: 3px;
+    padding: 0.35rem;
+    margin: 0 auto 0.75rem;
+}
 form[data-error="emailinuse"]::before {
     content: "Email already in use!";
-    color: red;
-    font-size: 1.1rem;
-    font-weight: bold;
 }
 
 form[data-error="invalidinput"]::before {
     content: "Invalid input!";
-    color: red;
-    font-size: 1.25rem;
-    font-weight: bold;
 }
 
 form[data-error="invalid"]::before {
-    content: "Invalid input!";
-    color: red;
-    font-size: 1.25rem;
-    font-weight: bold;
+    content: "Invalid credentials.";
 }
 
 

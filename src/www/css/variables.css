@@ -1,6 +1,6 @@
 :root {
-    --max-width: 1400px;
-    --max-content-width: 1200px;
+    --max-width: 14000px;
+    --max-content-width: 1400px;
     --content-margin: 1rem;
 
     /* CI COLORS */
@@ -15,5 +15,5 @@
     --color-ci-background: 5, 10, 15;
 
     --content-tile-background: linear-gradient(45deg, rgba(var(--color-ci-3), 0.55), rgba(var(--color-ci-3), 0.35));
-    --content-tile-shadow: 0px 0px 2px 0px rgba(200, 200, 200, 0.2);
+    --content-tile-shadow: 0px 0px 2px 0px rgba(150, 150, 150, 0.3);
 }
