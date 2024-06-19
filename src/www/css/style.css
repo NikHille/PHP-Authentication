@@ -19,6 +19,8 @@ body {
 }
 
 
+/* TEXT STYLES */
+
 a {
     color: rgb(var(--color-ci-link));
     /* font-weight: bold; */
@@ -34,6 +36,17 @@ h1 {
     margin-top: 0;
 }
 
+
+.small {
+    font-size: 0.85em;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* GENERAL ELEMENTS */
 
 main {
     max-width: var(--max-content-width);

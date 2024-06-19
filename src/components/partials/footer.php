@@ -1,5 +1,10 @@
 <footer>
     <div class="footer-content">
-        <p class="signatur"><i>Nik Hillebrecht</i></p>
+        <div class="content-tile content-tile--dark">
+            <p class="signatur center">
+                <span class="small"><i>Made by</i></span><br>
+                Nik Hillebrecht
+            </p>
+        </div>
     </div>
 </footer>
