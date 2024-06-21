@@ -17,13 +17,12 @@ class LoginTest extends TestCase
                 "pwdhash" => "$2y$10\$anXIfsYXtK7GYHceQ95rWed8U3Y5FFb3orBVAJwxFyo3xy4U3LtDm"
             )
         );
-
         $user = new User($users);
         $email = 'test2@example.com';
         $pwdHashed = '$2y$10\$anXIfsYXtK7GYHceQ95rWed8U3Y5FFb3orBVAJwxFyo3xy4U3LtDm';
 
         // test if user exists in given users object
-        $result = $user->addUser($email, $pwdHashed);
+        $user->addUser($email, $pwdHashed);
         $this->assertArrayHasKey('1', $user->getUsers());
     }
 }

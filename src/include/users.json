@@ -1,3 +1,7 @@
 {
-    "lastIndex": 0
+    "lastIndex": 1,
+    "1": {
+        "email": "test@example.com",
+        "pwdhash": "$2y$10$poHVe1V7i15IOAujgcOAHu872AXVFoCvws\/EGJvfpBRgyVj8\/B6ea"
+    }
 }

@@ -16,15 +16,23 @@ form::before {
     margin: 0 auto 0.75rem;
 }
 form[data-error="emailinuse"]::before {
-    content: "Email already in use!";
+    content: "Email already in use.";
 }
 
 form[data-error="invalidinput"]::before {
-    content: "Invalid input!";
+    content: "Invalid input.";
 }
 
 form[data-error="invalid"]::before {
     content: "Invalid credentials.";
+}
+
+form[data-error="csrfmismatch"]::before {
+    content: "CSRF token mismatch. Please try again.";
+}
+
+form[data-error="insecureconnection"]::before {
+    content: "Insecure connection. Check and try again.";
 }
 
 
@@ -112,7 +120,11 @@ summary {
 }
 
 
-@media (max-width: 619px) {
+@media (max-width: 640px) {
+    form::before {
+        max-width: 250px;
+    }
+    
     fieldset.emails,
     fieldset.pwds {
         flex-direction: column;

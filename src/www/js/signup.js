@@ -13,6 +13,7 @@ if (errorMsg) {
 form.addEventListener('submit', formSubmit);
 
 
+// adding event change event listener to inputs
 inputs.forEach(input => {
     input.addEventListener('change', (e) => {
         validateInput(e.target);
@@ -47,6 +48,7 @@ function validateInput(input) {
     if (input.name === 'email') {
         let regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
         result = regex.test(input.value);
+        // check and update email repeat input
         validateInput(inputs[1]);
     }
     if (input.name === 'pwd') {
@@ -58,6 +60,7 @@ function validateInput(input) {
             if (!result) break;
             result = regexArr[i].test(input.value);
         }
+        // check and update password repeat input
         validateInput(inputs[3]);
     }
     if (input.name === 'email_rpt') {
@@ -71,6 +74,11 @@ function validateInput(input) {
 }
 
 
+/**
+ * Update input classlist depending on input validity.
+ * @param {Element} input Input elmement to be updated.
+ * @param {Boolean} valid Input validity bool.
+ */
 function updateInput(input, valid) {
     if (valid) input.classList.remove('invalid');
     else input.classList.add('invalid');

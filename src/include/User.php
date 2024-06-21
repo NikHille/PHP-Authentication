@@ -36,13 +36,22 @@ class User
         file_put_contents($this->usersJsonPath, json_encode($this->users));
     }
 
-
+    
+    /**
+     * Getter for users object.
+     * @return array
+     */
     public function getUsers()
     {
         return $this->users;
     }
 
-
+    
+    /**
+     * Returning the password hash of the given email from the users object.
+     * @param  mixed $email The email for which to get the password hash.
+     * @return string
+     */
     public function getPwdHash($email)
     {
         foreach ($this->users as $key => $value) {

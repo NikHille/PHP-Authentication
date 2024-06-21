@@ -12,9 +12,11 @@ class SignupTest extends TestCase
         $email = 'name@example.com';
         $emailWrong = 'example.com';
 
+        // test for valid email
         $result = Signup::verifyEmail($email, $email);
         $this->assertTrue($result);
 
+        // test for invalid email
         $result = Signup::verifyEmail($email, $emailWrong);
         $this->assertNotTrue($result);
     }
@@ -25,14 +27,20 @@ class SignupTest extends TestCase
         $email = 'test@example.com';
         $emailRptWrong = 'tset@example.com';
 
+        // test for equal emails
         $resultEqual = Signup::verifyEmail($email, $email);
         $this->assertTrue($resultEqual);
 
+        // test for inequal emails
         $resultNotEqual = Signup::verifyEmail($email, $emailRptWrong);
         $this->assertNotTrue($resultNotEqual);
     }
 
-
+    
+    /**
+     * Test if password valid for various requirements.
+     * @return void
+     */
     public function testForValidPwd()
     {
         // test for valid password
@@ -76,6 +84,7 @@ class SignupTest extends TestCase
         $result = Signup::verifyPassword($pwd, $pwd);
         $this->assertTrue($result);
 
+        // test for inequal passwords
         $result = Signup::verifyPassword($pwd, $pwdWrong);
         $this->assertNotTrue($result);
     }

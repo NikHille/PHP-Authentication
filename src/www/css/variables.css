@@ -1,7 +1,7 @@
 :root {
     --max-width: 14000px;
-    --max-content-width: 1400px;
-    --content-margin: 1rem;
+    --max-content-width: 1200px;
+    --content-margin: 25px;
 
     /* CI COLORS */
     --color-ci-1: 5, 40, 50;
