@@ -5,7 +5,7 @@ A showcase webapp that allows you to sign up and sign in, so you can access othe
 
 ## Get Started
 
-This project uses PHP and composer. Both are required to run this webapp.
+This project uses **PHP** and **composer**. Both are required to run this webapp.
 
 Install all [dependencies](#dependencies) using composer:
 
@@ -13,7 +13,7 @@ Install all [dependencies](#dependencies) using composer:
 composer install
 ```
 
-For development you can start a webserver using the native php command:
+For development and testing you can start a webserver using the native php command from the project root:
 
 ```cmd
 php -S 127.0.0.1:8000 -t src/www
@@ -35,7 +35,7 @@ Unit tests are written with PHPUnit and can be started with:
 ./vendor/bin/phpunit
 ```
 
-or use the composer script.
+or use the composer script:
 
 ```cmd
 composer run-script test
@@ -47,3 +47,8 @@ composer run-script test
 Following dependencies are being used:
 
 - PHPUnit
+
+
+## Author
+
+[Nik Hillebrecht](https://github.com/NikHille)
