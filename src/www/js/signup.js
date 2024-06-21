@@ -80,6 +80,6 @@ function validateInput(input) {
  * @param {Boolean} valid Input validity bool.
  */
 function updateInput(input, valid) {
-    if (valid) input.classList.remove('invalid');
+    if (valid || input.value === '') input.classList.remove('invalid');
     else input.classList.add('invalid');
 }
