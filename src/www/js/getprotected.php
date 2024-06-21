@@ -14,16 +14,16 @@ $jsFileName = $_GET['js'];
 
 switch($jsFileName) {
     case 'bubble':
-        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../js/bubble.js');
+        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../protected/js/bubble.js');
         break;
     case 'libs/Bubble':
-        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../js/libs/Bubble.js');
+        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../protected/js/libs/Bubble.js');
         break;
     case 'libs/physics':
-        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../js/libs/physics.js');
+        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../protected/js/libs/physics.js');
         break;
     case 'libs/Vector2':
-        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../js/libs/Vector2.js');
+        $js = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../protected/js/libs/Vector2.js');
         break;
 }
 
